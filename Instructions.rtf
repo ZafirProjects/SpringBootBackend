@@ -1,0 +1,106 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2757
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue0;
+\red255\green255\blue255;\red212\green212\blue212;\red203\green203\blue202;\red141\green213\blue254;\red194\green125\blue100;
+\red202\green202\blue202;\red255\green255\blue255;\red212\green212\blue212;\red203\green203\blue202;\red141\green213\blue254;
+\red194\green125\blue100;\red213\green213\blue212;\red0\green0\blue0;\red255\green255\blue255;\red0\green0\blue0;
+\red255\green255\blue255;\red213\green213\blue212;\red203\green203\blue202;\red142\green213\blue255;\red194\green125\blue100;
+\red167\green197\blue151;\red202\green202\blue202;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c0\c1\c1;
+\cssrgb\c100000\c100000\c99971;\cssrgb\c86465\c86464\c86248;\cssrgb\c83320\c83320\c83112;\cssrgb\c61545\c86704\c99884;\cssrgb\c80772\c56796\c46790;
+\cssrgb\c83137\c83137\c83137;\cssrgb\c100000\c100000\c99971;\cssrgb\c86465\c86464\c86248;\cssrgb\c83320\c83320\c83112;\cssrgb\c61545\c86704\c99884;
+\cssrgb\c80772\c56796\c46790;\cssrgb\c86653\c86651\c86219;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99956;\cssrgb\c0\c1\c1;
+\cssrgb\c100000\c100000\c99926;\cssrgb\c86559\c86558\c86234;\cssrgb\c83411\c83411\c83099;\cssrgb\c61729\c86919\c100000;\cssrgb\c80765\c56762\c46655;
+\cssrgb\c71061\c80852\c65647;\cssrgb\c83137\c83137\c83137;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww19080\viewh19680\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs72 \cf0 Reply Streaming Service\
+
+\fs24 \
+\pard\pardeftab720\partightenfactor0
+
+\fs48 \cf2 \expnd0\expndtw0\kerning0
+About the program\
+
+\fs28 This backend was written using the Java Spring framework. It uses an embedded h2 database to store data. The DoB accepted by the API is only LocalDate and not LocalDateTime since no one knows the millisecond they were born in. Getting users with or without a credit card requires a query parameter.
+\fs48 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Running the program
+\fs24 \
+
+\fs36 Prerequisites:
+\fs24 \
+
+\fs28 Ensure java is installed on your machine (preferably Java 17 Bellsoft Liberica): https://bell-sw.com/pages/downloads/#jdk-17-lts\
+Install maven on to your computer using the following guide: https://www.baeldung.com/install-maven-on-windows-linux-mac\
+On MacOS with home-brew you can just do:	brew install maven\
+\
+After unzipping the file\
+Method 1:\
+Step 1: CD into the \'91streaming\'92 folder you have just unzipped\
+Step 2: install dependencies by running:		mvn clean install\
+Step 3: Run the tests by running:			mvn clean test\
+Step 4: Run the server by running:			mvn spring-boot:run\
+Step 5: Make requests to the server using Postman or Curl (or whatever you want)\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+Method 2:\
+Open the project in IntelliJ and run the StreamingApplication class to get the server running.\
+Run the tests in the tests folder.\cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+
+\fs48 Examples of Valid Requests:
+\fs28 \
+POST 
+\f1 \cf4 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 localhost:8080/users
+\f0 \cf4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \{\cf4 \strokec7 \
+    \cf4 \strokec8 "username"\cf4 \strokec6 :\cf4 \strokec7  \cf4 \strokec9 "User1"\cf4 \strokec6 ,\cf4 \strokec7 \
+    \cf4 \strokec8 "password"\cf4 \strokec6 :\cf4 \strokec7  \cf4 \strokec9 "Password1"\cf4 \strokec6 ,\cf4 \strokec7 \
+    \cf4 \strokec8 "email"\cf4 \strokec6 :\cf4 \strokec7  \cf4 \strokec9 "email1@address.com"\cf4 \strokec6 ,\cf4 \strokec7 \
+    \cf4 \strokec8 "doB"\cf4 \strokec6 :\cf4 \strokec7  \cf4 \strokec9 "2001-11-20"\cf4 \strokec6 ,\cf4 \strokec7 \
+    \cf4 \strokec8 "creditCardNumber"\cf4 \strokec6 :\cf4 \strokec7  \cf4 \strokec9 "4242424242424242"\cf4 \strokec7 \
+\cf4 \strokec6 \}
+\f2\fs24 \cf10 \cb1 \strokec10 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \outl0\strokewidth0 \
+POST 
+\f1 \cf2 localhost:8080/users
+\f0 \cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \{\
+    "username": "User2\'94,\
+    "password": "Password2\'94,\
+    "email": "email2@address.com",\
+    "doB": "2002-11-20",\
+    "creditCardNumber": \'93\'94\
+\}\
+\
+\cf4 GET \cf4 \outl0\strokewidth0 \strokec5 localhost:8080/users?CreditCard=Yes\
+GET localhost:8080/users?CreditCard=No\
+\
+POST \cf17 \strokec18 localhost:8080/payments\cf19 \strokec20 \
+\pard\pardeftab720\partightenfactor0
+\cf17 \strokec21 \{\cf17 \strokec22 \
+    \cf17 \strokec23 "creditCardNumber"\cf17 \strokec21 :\cf17 \strokec22  \cf17 \strokec24 "4242424242424242"\cf17 \strokec21 ,\cf17 \strokec22 \
+    \cf17 \strokec23 "amount"\cf17 \strokec21 :\cf17 \strokec22  \cf17 \strokec25 100\cf17 \strokec22 \
+\cf17 \strokec21 \}
+\f2\fs24 \cf10 \cb1 \strokec10 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\cf26 \cb1 \
+\
+\
+}
