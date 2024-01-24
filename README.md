@@ -1,6 +1,6 @@
 # Spring Boot Backend
 
-This repository was made to highlight my ability to make APIs and tests in Java Spring. This backend was written using the Java Spring framework. It uses an embedded h2 database to store data. The DoB accepted by the API is only LocalDate and not LocalDateTime since no one knows the millisecond they were born in. Getting users with or without a credit card requires a query parameter.
+This repository was made to highlight my ability to make APIs and tests in Java Spring. This backend was written using the Java Spring framework. It uses an embedded h2 database to store data.
 
 ## Prerequisites
 Ensure java is installed on your machine (preferably Java 17 [Bellsoft Liberica](https://bell-sw.com/pages/downloads/#jdk-17-lts)) \
