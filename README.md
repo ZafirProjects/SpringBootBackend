@@ -3,12 +3,12 @@
 This repository was made to highlight my ability to make APIs and tests in Java Spring. This backend was written using the Java Spring framework. It uses an embedded h2 database to store data.
 
 ## Prerequisites
-Ensure java is installed on your machine (preferably Java 17 [Bellsoft Liberica](https://bell-sw.com/pages/downloads/#jdk-17-lts)) \
-Install maven on to your computer using the following [guide](https://www.baeldung.com/install-maven-on-windows-linux-mac). Or if you're on MacOS with [homebrew](https://brew.sh) installed you can just do:
+1. Ensure java is installed on your machine (preferably Java 17 [Bellsoft Liberica](https://bell-sw.com/pages/downloads/#jdk-17-lts)) \
+2. Install maven on to your computer using the following [guide](https://www.baeldung.com/install-maven-on-windows-linux-mac). Or if you're on MacOS with [homebrew](https://brew.sh) installed you can just do:
 ```
 brew install maven
 ```
-Install the repository
+3. Install the repository
 ```
 git clone https://github.com/ZafirProjects/SpringBootBackend.git
 ```
