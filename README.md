@@ -14,7 +14,7 @@ Install the repository
 git clone https://github.com/ZafirProjects/SpringBootBackend.git
 ```
 ## Running the project
-#### Method 1:\
+#### Method 1:
 Step 1: CD into the 'streaming' folder in the repo you have just cloned\
 Step 2: install dependencies by running:\
 ```
@@ -30,7 +30,7 @@ mvn spring-boot:run
 ```
 Step 5: Make requests to the server using Postman or Curl (or whatever you want)\
 
-#### Method 2:\
+#### Method 2:
 Open the project in IntelliJ and run the StreamingApplication class to get the server running.\
 Run the tests in the tests folder.
 
